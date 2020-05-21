@@ -18,10 +18,32 @@ function runSpeech(){
   recognition.onresult = function(event) {
     var last = event.results.length - 1;
     var command = event.results[last][0].transcript;
-    document.getElementById('my-input').value =  command;
+
+    switch (command) {
+      case 'rojo':
+        document.body.style.backgroundColor = "red";
+        break;
+      case 'azul':
+        document.body.style.backgroundColor = "blue";
+        break;
+      case 'verde':
+        document.body.style.backgroundColor = "green";
+        break;
+      case 'amarillo':
+        document.body.style.backgroundColor = "yellow";
+        break;
+      case 'Celeste' || 'celeste':
+        document.body.style.backgroundColor = "lightblue";;
+        break;
+      default:
+        document.body.style.backgroundColor = "black";
+        console.log(`Lo siento pero no se que color es ${command}`);
+    }
 };
 
   recognition.onspeechend = function() {
     recognition.stop();
 };
+
 }
+
