@@ -63,7 +63,7 @@ function showError(error) {
   errorDiv.innerText = error;
   alertDiv.appendChild(errorDiv)
 
-  //setTimeout(clearError, 2500)
+  setTimeout(clearError, 2500)
 
   function clearError() {
     alertDiv.removeChild(alertDiv.firstChild);
