@@ -24,6 +24,9 @@ function runSpeech(){
       case 'rojo':
         document.body.style.backgroundColor = "red";
         break;
+      case 'blanco':
+        document.body.style.backgroundColor = "white";
+        break;
       case 'colorado':
         document.body.style.backgroundColor = "red";
         break;
