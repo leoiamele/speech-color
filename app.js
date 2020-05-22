@@ -24,8 +24,14 @@ function runSpeech(){
       case 'rojo':
         document.body.style.backgroundColor = "red";
         break;
+      case 'colorado':
+        document.body.style.backgroundColor = "red";
+        break;
       case 'violetta':
         document.body.style.backgroundColor = "mediumorchid";
+        break;
+      case 'rosa':
+        document.body.style.backgroundColor = "pink";
         break;
       case 'naranja':
         document.body.style.backgroundColor = "orange";
@@ -45,7 +51,6 @@ function runSpeech(){
       default:
         document.body.style.backgroundColor = "grey";
         showError(`Ups... Lo siento pero no se que color es ${command}`)
-        console.log(`Lo siento pero no se que color es ${command}`);
     }
 };
 
@@ -57,7 +62,7 @@ function runSpeech(){
 
 function showError(error) {
   const errorDiv = document.createElement('div');
-  const alertDiv = document.getElementById('alert');
+  const alertDiv = document.getElementById('error');
 
   errorDiv.className = 'alert alert-dark mt-5'
   errorDiv.innerText = error;
